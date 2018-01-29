@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <string-array name="select">
+        <item>여행지를 선택해 주세요(전체보기)</item>
+        <item>아시아</item>
+        <item>유럽</item>
+        <item>아메리카</item>
+        <item>오세아니아</item>
+        <item>아프리카</item>
+
+    </string-array>
+
+    <string-array name="continent">
+        <item>아시아</item>
+        <item>유럽</item>
+        <item>아메리카</item>
+        <item>오세아니아</item>
+        <item>아프리카</item>
+
+    </string-array>
+
+    <string-array name="aisa">
+        <item>대한민국</item>
+        <item>대만</item>
+        <item>라오스</item>
+        <item>마카오</item>
+        <item>말레아시아</item>
+        <item>몽골</item>
+        <item>베트남</item>
+        <item>싱가포르</item>
+        <item>인도</item>
+        <item>인도네시아</item>
+        <item>일본</item>
+        <item>중국</item>
+        <item>캄보디아</item>
+        <item>태국</item>
+        <item>터키</item>
+        <item>필리핀</item>
+        <item>홍콩</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="europe">
+        <item>그리스</item>
+        <item>네덜란드</item>
+        <item>노르웨이</item>
+        <item>덴마크</item>
+        <item>독일</item>
+        <item>러시아</item>
+        <item>벨기에</item>
+        <item>스위스</item>
+        <item>스페인</item>
+        <item>영국</item>
+        <item>오스트리아</item>
+        <item>이탈리아</item>
+        <item>체코</item>
+        <item>포르투갈</item>
+        <item>프랑스</item>
+        <item>핀란드</item>
+        <item>헝가리</item>
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="america">
+        <item>미국</item>
+        <item>멕시코</item>
+        <item>브라질</item>
+        <item>캐나다</item>
+        <item>기타</item>
+
+    </string-array>
+
+    <string-array name="oceania">
+        <item>뉴질랜드</item>
+        <item>호주</item>
+        <item>기타</item>
+    </string-array>
+    <string-array name="africa">
+        <item>기타</item>
+    </string-array>
+
+    <string-array name="gender">
+        <item>성별을 선택해 주세요.</item>
+        <item>남</item>
+        <item>여</item>
+    </string-array>
+
+
+</resources>

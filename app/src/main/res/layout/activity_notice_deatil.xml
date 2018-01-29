@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_notice_deatil"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.missionofseoul.seoul.NoticeDeatilActivity">
+
+    <ScrollView
+        android:id="@+id/cast_scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white">
+
+            <TextView
+                android:id="@+id/notice_maintitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Here is main title area."
+                android:textColor="@color/darkgray"
+                android:textSize="14dp" />
+
+            <TextView
+                android:id="@+id/notice_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notice_maintitle"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="2016-11-30"
+                android:textSize="8dp" />
+
+
+            <ImageView
+                android:id="@+id/icon_comment"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_below="@id/notice_maintitle"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/notice_date"
+                android:src="@drawable/icon_comment" />
+
+
+            <TextView
+                android:id="@+id/notice_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/notice_maintitle"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/icon_comment"
+                android:text="0"
+                android:textSize="8dp" />
+
+            <ImageView
+                android:id="@+id/img_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/notice_date"
+                android:layout_marginTop="16dp"
+                android:background="@color/backcolor" />
+
+            <!--서버에서 가져올 이미지가 놓여질 곳 -->
+            <!--   <LinearLayout
+                   android:id="@+id/layout_inflateimg"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:layout_below="@id/img_divider"
+                   android:layout_marginTop="24dp"
+                   android:background="@color/white"
+                   android:orientation="vertical">
+
+
+               </LinearLayout>-->
+            <WebView
+                android:id="@+id/webview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_divider"
+                android:layout_marginTop="24dp"
+                tools:ignore="WebViewLayout">
+
+
+            </WebView>
+
+
+            <ImageView
+                android:id="@+id/img_divider01"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/webview"
+                android:layout_marginTop="16dp"
+                android:background="@color/backcolor" />
+
+            <TextView
+                android:id="@+id/comment_numtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_divider01"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="댓글" />
+
+            <TextView
+                android:id="@+id/comment_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_divider01"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/comment_numtext"
+                android:text="0"
+                android:textColor="@color/colorAccent" />
+
+            <ImageView
+                android:id="@+id/img_divider02"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/comment_numtext"
+                android:layout_marginTop="8dp"
+                android:background="@color/backcolor" />
+
+            <ListView
+                android:id="@+id/listview_noticecomment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_divider02"
+                android:layout_marginTop="8dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp">
+
+            </ListView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/backcolor"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <EditText
+            android:id="@+id/comment_edittext"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="4"
+            android:background="@drawable/rounded_edittext"
+            android:hint="댓글을 달아보세요."
+            android:paddingLeft="8dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="commentBtn"
+            android:text="전송"
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

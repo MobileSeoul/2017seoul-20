@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_find_friend_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.missionofseoul.seoul.FindFriendDetailActivity">
+
+    <ScrollView
+        android:id="@+id/find_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/find_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Title Area"
+                android:textColor="@color/darkgray"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/find_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/find_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="2016-11-30 12:30:23"
+                android:textSize="8dp" />
+
+
+            <ImageView
+                android:id="@+id/icon_visibility"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_below="@id/find_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/find_date"
+                android:src="@drawable/icon_visibility" />
+
+            <TextView
+                android:id="@+id/find_views"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/find_title"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/icon_visibility"
+                android:text="0"
+                android:textSize="8dp" />
+
+
+            <ImageView
+                android:id="@+id/icon_comment"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_below="@id/find_title"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/find_views"
+                android:src="@drawable/icon_comment" />
+
+            <TextView
+                android:id="@+id/find_comment_mum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/find_title"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/icon_comment"
+                android:text="0"
+                android:textSize="8dp" />
+
+            <ImageView
+                android:id="@+id/img_divider"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/find_date"
+                android:layout_marginTop="8dp"
+                android:background="@color/backcolor" />
+
+            <TextView
+                android:id="@+id/find_contents"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_divider"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="16dp"
+                android:textColor="@color/darkgray"
+                android:text="findfriend contents area" />
+
+            <ImageView
+                android:id="@+id/img_divider00"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/find_contents"
+                android:layout_marginTop="36dp"
+                android:background="@color/backcolor" />
+
+            <ImageView
+                android:id="@+id/profile_img"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_below="@id/img_divider00"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:clickable="true"
+                android:onClick="clickProfile"
+                android:src="@drawable/profile" />
+
+            <TextView
+                android:id="@+id/nick_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/profile_img"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"
+                android:text="nickName" />
+
+            <TextView
+                android:id="@+id/email_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/nick_text"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                android:onClick="clickEmail"
+                android:text="aaaa@naver.com"
+                android:textColor="@color/colorAccent" />
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/email_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="ca-app-pub-2248821736485093/9705141163">
+
+            </com.google.android.gms.ads.AdView>
+
+            <ImageView
+                android:id="@+id/img_divider01"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/adview"
+                android:background="@color/backcolor" />
+
+            <TextView
+                android:id="@+id/comment_numtext"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_divider01"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:text="댓글" />
+
+            <TextView
+                android:id="@+id/comment_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_divider01"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_toRightOf="@id/comment_numtext"
+                android:text="0"
+                android:textColor="@color/colorAccent" />
+
+
+            <ImageView
+                android:id="@+id/img_divider02"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/comment_num"
+                android:layout_marginTop="8dp"
+                android:background="@color/backcolor" />
+
+            <ListView
+                android:id="@+id/listview_findcomment"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/img_divider02"
+                android:layout_marginTop="8dp"
+                android:divider="@android:color/transparent"
+                android:dividerHeight="0dp">
+
+            </ListView>
+
+
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/backcolor"
+        android:clickable="true"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="5">
+
+        <EditText
+            android:id="@+id/comment_edittext"
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_marginLeft="16dp"
+            android:layout_weight="4"
+            android:background="@drawable/rounded_edittext"
+            android:hint="댓글을 달아보세요."
+            android:paddingLeft="8dp"
+            android:textSize="12dp" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:onClick="commentBtn"
+            android:text="전송"
+            android:textColor="@color/colorAccent"
+            android:textSize="16dp" />
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

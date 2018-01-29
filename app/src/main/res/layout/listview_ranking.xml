@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/rank_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="1"
+        android:textColor="@color/darkgray"
+        android:textSize="40dp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/profile"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignBottom="@+id/rank_num"
+        android:layout_marginLeft="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_toEndOf="@+id/rank_num"
+        android:layout_toRightOf="@+id/rank_num"
+        android:src="@drawable/profile" />
+
+    <TextView
+        android:id="@+id/nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/profile"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="4dp"
+        android:layout_toEndOf="@+id/profile"
+        android:layout_toRightOf="@+id/profile"
+        android:text="nickname"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/mission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rank_num"
+        android:layout_alignBottom="@+id/rank_num"
+        android:layout_alignLeft="@+id/nick"
+        android:layout_alignStart="@+id/nick"
+        android:text="미션수행률"
+        android:textSize="14dp" />
+
+    <TextView
+        android:id="@+id/rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/mission"
+        android:layout_alignBottom="@+id/mission"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_toEndOf="@+id/mission"
+        android:layout_toRightOf="@+id/mission"
+        android:text="0.0%"
+        android:textColor="@color/darkgray"
+        android:textSize="24dp" />
+
+    <ImageView
+        android:id="@+id/medal"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="8dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/medal"
+        android:layout_marginTop="16dp"
+        android:background="@color/backcolor" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/rank_num"
+        android:layout_alignBottom="@+id/rank_num"
+        android:layout_toEndOf="@+id/rank_num"
+        android:layout_toRightOf="@+id/rank_num"
+        android:text="위"
+        android:textSize="12dp" />
+
+    <!--훈장-->
+    <ImageView
+        android:id="@+id/winner"
+        android:layout_width="32dp"
+        android:layout_height="42dp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_toLeftOf="@+id/mission"
+        android:layout_toStartOf="@+id/mission" />
+
+
+    <ImageView
+        android:id="@+id/crwon"
+        android:layout_width="36dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp" />
+
+
+</RelativeLayout>

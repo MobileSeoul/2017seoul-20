@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.missionofseoul.seoul.UserActivity">
+
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_email"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lightgray">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="이메일 인증을 해보세요."
+                    android:textColor="@color/darkgray" />
+
+                <FrameLayout
+                    android:id="@+id/layout_closebtn"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:clickable="true"
+                    android:onClick="closeBtn">
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/close_b_btn" />
+
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/email_address"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/layout_closebtn"
+                    android:layout_centerHorizontal="true"
+                    android:text="mission@missionoftravel.com" />
+
+                <TextView
+                    android:id="@+id/email_infotext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/email_address"
+                    android:layout_centerHorizontal="true"
+                    android:text="회원님의 이메일 주소를 확인하여 \n 더 많은 기능을 사용해 보세요." />
+
+                <Button
+                    android:id="@+id/email_sendbtn"
+                    android:layout_width="160dp"
+                    android:layout_height="32dp"
+                    android:layout_below="@id/email_infotext"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:background="@drawable/detail_btn_back"
+                    android:onClick="confirmEmail"
+                    android:text="인증 메일 보내기" />
+
+                <ImageView
+                    android:id="@+id/divider00"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/email_sendbtn"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/backcolor" />
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/layout_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_email"
+                android:layout_marginTop="24dp">
+
+                <ImageView
+                    android:id="@+id/profile"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_marginLeft="16dp"
+                    android:clickable="true"
+                    android:onClick="clickProfile"
+                    android:src="@drawable/profile" />
+
+                <LinearLayout
+                    android:id="@+id/layout_pack"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_toRightOf="@id/profile"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <!--미션수행률-->
+                    <LinearLayout
+                        android:id="@+id/layout_missionrate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="clickRank"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/missionrate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0%"
+                            android:textColor="@color/darkgray"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="미션수행률"
+                            android:textColor="@color/darkgray"
+                            android:textSize="12dp" />
+                    </LinearLayout>
+
+                    <!--여행톡-->
+                    <LinearLayout
+                        android:id="@+id/layout_talk"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:onClick="travelTalk"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/talk_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textColor="@color/darkgray"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="여행톡"
+                            android:textColor="@color/darkgray"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+                    <!--포인트-->
+                    <LinearLayout
+                        android:id="@+id/layout_point"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:clickable="true"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0P"
+                            android:textColor="@color/darkgray"
+                            android:textSize="14dp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="포인트"
+                            android:textColor="@color/darkgray"
+                            android:textSize="12dp" />
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="32dp"
+                    android:layout_below="@id/layout_pack"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_toRightOf="@id/profile"
+                    android:background="@drawable/editprofile_btn"
+                    android:onClick="editProfileBtn"
+                    android:text="프로필 수정"
+                    android:textColor="@color/darkgray"
+                    android:textSize="14dp" />
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_profile"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkgray"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/ageNsex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkgray"
+                    android:textSize="14dp" />
+
+                <TextView
+                    android:id="@+id/introduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="자기소개를 입력해보세요."
+                    android:textColor="@color/darkgray"
+                    android:textSize="14dp" />
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/divider01"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/layout_linear"
+                android:layout_marginTop="16dp"
+                android:background="@color/backcolor" />
+
+            <!--GridView 시작-->
+            <!--     <GridView
+                     android:id="@+id/gridview"
+                     android:layout_width="match_parent"
+                     android:layout_height="match_parent"
+                     android:layout_below="@id/divider01"
+                     android:layout_marginTop="8dp"
+                     android:clipToPadding="false"
+                     android:horizontalSpacing="@dimen/mis_space_size"
+                     android:numColumns="4"
+                     android:paddingBottom="56dp"
+                     android:verticalSpacing="@dimen/mis_space_size" />-->
+
+            <com.missionofseoul.seoul.ExpandableHeightGridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider01"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:horizontalSpacing="@dimen/mis_space_size"
+                android:numColumns="4"
+                android:paddingBottom="64dp"
+                android:verticalSpacing="@dimen/mis_space_size" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!--bottom navigation 시작 -->
+    <!-- LinearLayout에 clickable을 줘서 터치영역을 넓게 주었다-->
+    <!--bottom Navigation-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottomnav"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <!-- home btn star-->
+        <LinearLayout
+            android:id="@+id/layout_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="bottomBtn"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/home_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="홈"
+                android:textSize="8dp" />
+        </LinearLayout>
+        <!-- home btn end-->
+        <!--   search btn start-->
+        <LinearLayout
+            android:id="@+id/layout_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="bottomBtn"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/search_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 주변"
+                android:textSize="8dp" />
+        </LinearLayout>
+        <!--   search btn end-->
+
+        <!--    user btn start-->
+        <LinearLayout
+            android:id="@+id/layout_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="bottomBtn"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/user_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/user_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 활동"
+                android:textSize="8dp" />
+        </LinearLayout>
+        <!-- user btn end-->
+
+        <!-- thebogi end start-->
+        <LinearLayout
+            android:id="@+id/layou_thebogi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="bottomBtn"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/thebogi_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/thebogi_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="더보기"
+                android:textSize="8dp" />
+        </LinearLayout>
+        <!--   thebogo btn end-->
+    </LinearLayout>
+    <!-- bottomNavigation end-->
+
+    <!--프로필 이미지 보여줄 레이아웃-->
+    <RelativeLayout
+        android:id="@+id/layout_fullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/fullimg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/testbg" />
+
+        <Button
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/close_w_btn"
+            android:onClick="closeFullScreen" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

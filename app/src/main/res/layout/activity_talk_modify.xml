@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_talk_modify"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.missionofseoul.seoul.TalkModifyActivity">
+
+    <EditText
+        android:id="@+id/talk_text"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@null"
+        android:gravity="start"
+        android:hint="내용을 수정 후 수정 버튼을 눌러주세요."
+        android:textSize="12dp" />
+
+</RelativeLayout>

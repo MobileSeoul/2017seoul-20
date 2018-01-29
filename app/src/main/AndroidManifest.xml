@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.missionofseoul.seoul">
+
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/app_icon"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".intro.IntroActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".intro.LoginActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".intro.MemberJoinActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".DetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".GalleryActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoStatusBar" />
+        <activity
+            android:name=".TotalReviewActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CastDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".CastRecommentActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".ThebogiActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".thebogi.TermsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FindFrinedWriteActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".FindFriendDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FindRecommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FriendSearchActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NoticeDeatilActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".NoticeRecommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TalkWriteActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".TalkDetailActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".TalkRecommentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".EditProfileActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".MyTravelTalkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AnotherUserActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AnotherTalkActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TotalProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TalkModifyActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".FindPWActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".SearchMissionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".MissionImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:name=".thebogi.MissionExplainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".thebogi.NoticeActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SearchTalkActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".RankingActivity" />
+
+        <service android:name=".MyFirebaseMessagingService">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service android:name=".MyFirebaseInstanceIDService">
+            <intent-filter>
+                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
+            </intent-filter>
+        </service>
+
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_api_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".CultureDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity android:name=".CultureWebViewActivity"></activity>
+    </application>
+
+</manifest>

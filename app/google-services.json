@@ -1,0 +1,73 @@
+{
+  "project_info": {
+    "project_number": "466148513178",
+    "firebase_url": "https://fcm-push-message-776ec.firebaseio.com",
+    "project_id": "fcm-push-message-776ec",
+    "storage_bucket": "fcm-push-message-776ec.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466148513178:android:5b051dc6f4bff3fc",
+        "android_client_info": {
+          "package_name": "com.kommaz.mot_main"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466148513178-f29ccgh2s8sj1nv3i487er06v01gp0mt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6iXEJk0UJWHbzq5LJ2Fq9Dn_THpi_Nu8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:466148513178:android:a12f86a019edd5bc",
+        "android_client_info": {
+          "package_name": "com.missionofseoul.seoul"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "466148513178-f29ccgh2s8sj1nv3i487er06v01gp0mt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD6iXEJk0UJWHbzq5LJ2Fq9Dn_THpi_Nu8"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

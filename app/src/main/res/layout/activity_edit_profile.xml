@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_edit_profile"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.missionofseoul.seoul.EditProfileActivity">
+
+    <LinearLayout
+        android:id="@+id/layout_profile"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:onClick="clickProfile"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/profile" />
+
+        <ImageView
+            android:layout_width="16dp"
+            android:layout_height="14dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/camera_icon" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/divider00"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/layout_profile"
+        android:layout_marginTop="16dp"
+        android:background="@color/backcolor" />
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/divider00"
+        android:layout_marginTop="16dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/layout_editnick"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="닉네임"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/edit_nick"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="80dp"
+                    android:background="@null"
+                    android:hint="닉네임을 입력해 주세요(2~8자)"
+                    android:maxLength="8"
+                    android:paddingLeft="8dp"
+                    android:textSize="12dp" />
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/nick_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="16dp"
+                android:clickable="true"
+                android:onClick="checkNick"
+                android:text="중복확인"
+                android:textColor="@color/colorAccent"
+                android:textSize="12dp"
+                android:visibility="invisible" />
+
+
+            <ImageView
+                android:id="@+id/divider01"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/layout_editnick"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/backcolor" />
+
+            <LinearLayout
+                android:id="@+id/layout_editbirth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider01"
+                android:layout_marginTop="24dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="생년월일"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/edit_birth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:onClick="clickEditBirth"
+                    android:paddingLeft="8dp"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/divider02"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/layout_editbirth"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/backcolor" />
+
+
+            <LinearLayout
+                android:id="@+id/layout_editgender"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider02"
+                android:layout_marginTop="24dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="성별"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12dp" />
+
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp">
+
+                </Spinner>
+
+
+            </LinearLayout>
+
+
+            <ImageView
+                android:id="@+id/divider03"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/layout_editgender"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/backcolor" />
+
+            <LinearLayout
+                android:id="@+id/layout_editintroduce"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider03"
+                android:layout_marginTop="24dp"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:text="자기소개"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12dp" />
+
+                <EditText
+                    android:id="@+id/edit_introduce"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="16dp"
+                    android:background="@null"
+                    android:hint="자기소개를 입력해 주세요."
+                    android:paddingLeft="8dp"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/divider04"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/layout_editintroduce"
+                android:layout_marginBottom="16dp"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginTop="8dp"
+                android:background="@color/backcolor" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <!-- 갤러리에서 선택한 이미지 보이는 레이아웃 -->
+    <RelativeLayout
+        android:id="@+id/layout_picshow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/black"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/selected_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true" />
+
+        <RelativeLayout
+            android:id="@+id/layout_show_hidden"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/darkgray"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:onClick="uploadPic"
+                android:text="선택"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="60dp"
+                android:layout_height="56dp"
+                android:clickable="true"
+                android:onClick="leftBtn">
+
+                <Button
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/arr_left_btn_f5f5f5" />
+
+
+            </FrameLayout>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

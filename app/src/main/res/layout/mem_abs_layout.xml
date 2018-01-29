@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:layout_centerVertical="true">
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/back_btn333"
+        android:onClick="backBtn"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="회원가입"
+        android:textColor="@color/darkgray" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerHorizontal="true"
+        android:text="약관보기"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"
+        android:textSize="12dp"
+        android:clickable="true"
+        android:onClick="clickTerm"/>
+
+
+</RelativeLayout>

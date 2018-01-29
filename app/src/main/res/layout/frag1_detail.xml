@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/layout_swipe_frag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <android.support.v4.widget.NestedScrollView
+            android:id="@+id/nestedscrollview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/divider00"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/backcolor" />
+
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider00"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="16dp"
+                    android:text="타이틀"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18dp" />
+
+                <TextView
+                    android:id="@+id/footnote_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/title_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="4dp"
+                    android:text="주석"
+                    android:textSize="8dp" />
+
+                <ImageView
+                    android:id="@+id/dummy_img"
+                    android:layout_width="16dp"
+                    android:layout_height="1dp"
+                    android:layout_below="@id/footnote_text"
+                    android:layout_centerHorizontal="true" />
+
+                <!-- 버튼 누르면 리뷰 쓸 영역 만들기 아래에 -->
+                <Button
+                    android:id="@+id/review_btn"
+                    android:layout_width="96dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/footnote_text"
+                    android:layout_marginTop="16dp"
+                    android:layout_toLeftOf="@id/dummy_img"
+                    android:background="@drawable/detail_btn_back"
+                    android:text="리뷰작성하기"
+                    android:textSize="10dp" />
+
+                <Button
+                    android:id="@+id/missioninfo_btn"
+                    android:layout_width="96dp"
+                    android:layout_height="24dp"
+                    android:layout_below="@id/footnote_text"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/dummy_img"
+                    android:background="@drawable/detail_btn_back"
+                    android:text="미션정보보기"
+                    android:textSize="10dp" />
+
+                <ImageView
+
+                    android:id="@+id/divider01"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@id/review_btn"
+                    android:layout_marginTop="24dp"
+                    android:background="@color/backcolor" />
+
+                <TextView
+                    android:id="@+id/thumtitle_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/divider01"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="8dp"
+                    android:text="이 미션을 수행한 사진들"
+                    android:textSize="10dp" />
+
+                <HorizontalScrollView
+                    android:id="@+id/horizontlal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider01"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginTop="40dp">
+
+                    <LinearLayout
+                        android:id="@+id/layout_linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+                <ImageView
+                    android:id="@+id/divider02"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@id/horizontlal"
+                    android:layout_marginTop="4dp"
+                    android:background="@color/backcolor" />
+
+                <TextView
+                    android:id="@+id/review_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider02"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="리뷰보기"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/review_totalnum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider02"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/review_title"
+                    android:text="28"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12dp" />
+
+                <!-- 전체보기를 클릭하면 리뷰 리스트뷰만 보이는 뷰 만들기-->
+                <TextView
+                    android:id="@+id/clicktotal_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/divider02"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="16dp"
+                    android:clickable="true"
+                    android:text="전체보기"
+                    android:textSize="11dp" />
+
+                <ImageView
+                    android:id="@+id/divider03"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/review_totalnum"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/backcolor" />
+
+                <ListView
+                    android:id="@+id/listview_review"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider03"
+                    android:layout_marginTop="8dp"
+                    android:divider="@android:color/transparent"
+                    android:dividerHeight="0dp">
+
+                </ListView>
+
+                <ImageView
+                    android:id="@+id/divider04"
+                    android:layout_width="match_parent"
+                    android:layout_height="8dp"
+                    android:layout_below="@id/listview_review"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/backcolor" />
+
+                <TextView
+                    android:id="@+id/mem_profile_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/divider04"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="이 미션을 수행한 대원들"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/clicktotal_profile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/divider04"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="8dp"
+                    android:clickable="true"
+                    android:text="전체보기"
+                    android:textSize="11dp" />
+
+                <!--서버에서 미션수행회원 프로필 가지고 오는 영역 -->
+
+
+                <RelativeLayout
+                    android:id="@+id/wrap_loadproile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/mem_profile_text"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="4dp"
+                    android:layout_marginTop="16dp">
+
+                    <LinearLayout
+                        android:id="@+id/loadprofile_area"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:orientation="horizontal"
+                        android:weightSum="7">
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/profile_totalnum"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="4dp"
+                        android:background="@drawable/profile_totalnum_back"
+                        android:gravity="center"
+                        android:text="0"
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                    <ImageView
+                        android:id="@+id/divider05"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:layout_below="@id/profile_totalnum"
+                        android:layout_marginTop="16dp"
+                        android:background="@color/backcolor" />
+
+                </RelativeLayout>
+
+
+            </RelativeLayout>
+
+        </android.support.v4.widget.NestedScrollView>
+    </android.support.v4.widget.SwipeRefreshLayout>
+</RelativeLayout>

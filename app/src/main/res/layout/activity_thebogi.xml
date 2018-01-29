@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_thebogi"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/backcolor"
+    tools:context="com.missionofseoul.seoul.ThebogiActivity">
+
+    <!-- //*******************************************************************//-->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <!--//***** 로그인하면 보여주는 영역 *****// -->
+            <LinearLayout
+                android:id="@+id/layout_checklogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="계정"
+                    android:textSize="8dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+                <RelativeLayout
+                    android:id="@+id/layout_relative"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/switch1"
+                        android:layout_alignTop="@+id/switch1"
+                        android:layout_marginLeft="16dp"
+                        android:gravity="center_vertical"
+                        android:text="프로필 공개"
+                        android:textColor="@color/darkgray" />
+
+                    <Switch
+                        android:id="@+id/switch1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="16dp"
+                        android:checked="false"
+                        android:textOff="비공개"
+                        android:textOn="공개" />
+
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+
+            </LinearLayout>
+            <!--//***** 로그인하면 보여주는 영역 끝 *****// -->
+            <RelativeLayout
+                android:id="@+id/layout_new1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_checklogin">
+
+                <!-- //*****사용정보보여주는 영역  *****// -->
+                <LinearLayout
+                    android:id="@+id/layout_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="32dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginLeft="16dp"
+                        android:text="정보"
+                        android:textSize="8dp" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />
+
+              <!--      <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/button"
+                        android:gravity="start|center_vertical"
+                        android:onClick="noticeBtn"
+                        android:paddingLeft="16dp"
+                        android:text="공지사항" />
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />-->
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/button"
+                        android:gravity="start|center_vertical"
+                        android:onClick="versionBtn"
+                        android:paddingLeft="16dp"
+                        android:text="버전정보" />
+
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />
+
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/button"
+                        android:gravity="start|center_vertical"
+                        android:onClick="infoBtn"
+                        android:paddingLeft="16dp"
+                        android:text="서울의미션 사용방법" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />
+
+                    <Button
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:background="@drawable/button"
+                        android:gravity="start|center_vertical"
+                        android:onClick="rankBtn"
+                        android:paddingLeft="16dp"
+                        android:text="서울의미션 랭킹순위" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/new_noticetext"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginTop="64dp"
+                    android:text="새로운 공지사항이 있습니다."
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12dp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </RelativeLayout>
+            <!-- //*****사용정보보여주는 영역 끝 *****// -->
+
+
+            <!-- //*****  사용자 권한 설정  *****// -->
+            <LinearLayout
+                android:id="@+id/layout_setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_new1"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="설정"
+                    android:textSize="8dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button"
+                    android:gravity="start|center_vertical"
+                    android:onClick="permissionBtn"
+                    android:paddingLeft="16dp"
+                    android:text="사용자 권한 설정" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+                <Button
+                    android:id="@+id/range_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:gravity="start|center_vertical"
+                    android:onClick="rangeMission"
+                    android:paddingLeft="16dp"
+                    android:text="미션 정렬 설정" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+
+                <Button
+                    android:id="@+id/hidden_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/button"
+                    android:gravity="start|center_vertical"
+                    android:onClick="isHiddenMission"
+                    android:paddingLeft="16dp"
+                    android:text="미션 숨김 취소" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_below="@id/layout_relative"
+                    android:background="@color/divider" />
+
+            </LinearLayout>
+            <!-- //*****  사용자 권한 설정  *****// -->
+
+            <!-- //*****약관보여주는 영역  *****// -->
+            <LinearLayout
+                android:id="@+id/layout_terms"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_setting"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:text="서비스 &amp; 문의"
+                    android:textSize="8dp" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+                <Button
+                    android:id="@+id/use_term"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button"
+                    android:gravity="start|center_vertical"
+                    android:onClick="termsBtn"
+                    android:paddingLeft="16dp"
+                    android:text="서비스이용약관" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+                <Button
+                    android:id="@+id/personinfo_term"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button"
+                    android:gravity="start|center_vertical"
+                    android:onClick="termsBtn"
+                    android:paddingLeft="16dp"
+                    android:text="개인정보처리방침" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+                <!--   <Button
+                        android:id="@+id/location_term"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/button"
+                        android:gravity="start|center_vertical"
+                        android:onClick="termsBtn"
+                        android:paddingLeft="16dp"
+                        android:text="위치정보 이용약관" />
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="@color/divider" />-->
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button"
+                    android:gravity="start|center_vertical"
+                    android:onClick="csBtn"
+                    android:paddingLeft="16dp"
+                    android:text="서울의미션 고객센터" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+
+            </LinearLayout>
+            <!-- //*****약관보여주는 영역 끝 *****// -->
+
+            <!-- //***** 로그인  영역 비로그인 상태 **** //-->
+            <LinearLayout
+                android:id="@+id/layout_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_terms"
+                android:layout_marginBottom="56dp"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+                <Button
+                    android:id="@+id/login_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button"
+                    android:onClick="loginBtn"
+                    android:paddingLeft="16dp"
+                    android:text="로그인" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+            </LinearLayout>
+            <!-- //***** 로그인  영역 끝**** //-->
+
+            <!-- //***** 로그아웃  영역 로그인 상태 **** //-->
+            <LinearLayout
+                android:id="@+id/layout_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_terms"
+                android:layout_marginBottom="56dp"
+                android:layout_marginTop="32dp"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+                <Button
+                    android:id="@+id/logout_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="48dp"
+                    android:background="@drawable/button"
+                    android:onClick="logoutBtn"
+                    android:paddingLeft="16dp"
+                    android:text="로그아웃" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:background="@color/divider" />
+
+            </LinearLayout>
+            <!-- //***** 로그인  영역 끝**** //-->
+        </RelativeLayout>
+    </ScrollView>
+    <!-- //*******************************************************************//-->
+    <!--   LinearLayout에 clickable을 줘서 터치영역을 넓게 주었다-->
+    <!--bottom Navigation-->
+    <LinearLayout
+        android:id="@+id/layout_bottom_navi"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bottomnav"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <!-- home btn star-->
+
+        <LinearLayout
+            android:id="@+id/layout_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="bottomBtn"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/home_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/home_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="홈"
+                android:textSize="8dp" />
+        </LinearLayout>
+        <!-- home btn end-->
+        <!--   search btn start-->
+        <LinearLayout
+            android:id="@+id/layout_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="bottomBtn"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/search_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 주변"
+                android:textSize="8dp" />
+        </LinearLayout>
+        <!--   search btn end-->
+
+        <!--    user btn start-->
+        <LinearLayout
+            android:id="@+id/layout_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="bottomBtn"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/user_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/user_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="내 활동"
+                android:textSize="8dp" />
+        </LinearLayout>
+        <!-- user btn end-->
+
+        <!-- thebogi end start-->
+
+        <LinearLayout
+            android:id="@+id/layou_thebogi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:clickable="true"
+            android:gravity="center"
+            android:onClick="bottomBtn"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/thebogi_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/thebogi_icon" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="더보기"
+                android:textSize="8dp" />
+        </LinearLayout>
+        <!--   thebogo btn end-->
+
+    </LinearLayout>
+    <!-- bottomNavigation end-->
+    <ImageView
+        android:id="@+id/new_notice"
+        android:layout_width="16dp"
+        android:layout_height="16dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="28dp"
+        android:layout_marginRight="24dp"
+        android:src="@drawable/new_icon"
+        android:visibility="gone" />
+
+
+</RelativeLayout>

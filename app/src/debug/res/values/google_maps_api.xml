@@ -1,0 +1,28 @@
+<resources>
+    <!--
+    TODO: Before you run your application, you need a Google Maps API key.
+
+    To get one, follow this link, follow the directions and press "Create" at the end:
+
+    https://console.developers.google.com/flows/enableapi?apiid=maps_android_backend&keyType=CLIENT_SIDE_ANDROID&r=CE:21:7B:AE:EC:26:24:37:85:5C:43:F7:71:71:19:49:EE:DB:D9:F2%3Bcom.missionoftrip.mot
+
+    You can also add your credentials to an existing key, using this line:
+    CE:21:7B:AE:EC:26:24:37:85:5C:43:F7:71:71:19:49:EE:DB:D9:F2;com.missionoftrip.mot
+
+    Alternatively, follow the directions here:
+    https://developers.google.com/maps/documentation/android/start#get-key
+
+    Once you have your key (it starts with "AIza"), replace the "google_maps_key"
+    string in this file.
+    -->
+    <!--디버그용-->
+    <!--  <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+          AIzaSyAZ2nPTFDkSACF1-V83KTlUxFQgBx61ltE
+      </string>-->
+
+    <!--배포용 apk 만들 때 주의-->
+  <!--   <string name="google_maps_key" templateMergeStrategy="preserve" translatable="false">
+    AIzaSyCAgjuuBTPeFMUx_qJ-AJvBm0m78Ubdfqw
+    </string>
+-->
+</resources>

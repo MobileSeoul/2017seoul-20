@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RadioGroup
+            android:id="@+id/rg_range"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <RadioButton
+                android:id="@+id/rb_normal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="기본정렬" />
+
+            <RadioButton
+                android:id="@+id/rb_row"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="난이도 정렬(낮은순서)" />
+
+            <RadioButton
+                android:id="@+id/rb_high"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="난이도 정렬(높은순서)" />
+
+            <RadioButton
+                android:id="@+id/rb_shuffle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="무작위 정렬(랜덤정렬)" />
+
+        </RadioGroup>
+
+    </LinearLayout>
+
+</RelativeLayout>

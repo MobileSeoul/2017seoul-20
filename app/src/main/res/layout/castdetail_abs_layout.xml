@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="16dp">
+
+    <Button
+        android:id="@+id/back_btn"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/back_btn333"
+        android:onClick="backBtn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="여행캐스트"
+        android:textColor="@color/darkgray"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <!--    <ImageView
+            android:id="@+id/icon_comment"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/icon_comment" />-->
+
+    <!--<ToggleButton
+        android:id="@+id/toggle_heart"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/toggle_heart"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:textOff=""
+        android:textOn=""
+        android:layout_alignParentRight="true" />-->
+
+    <ImageView
+        android:id="@+id/icon_heart"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:onClick="heartBtn"
+        android:src="@drawable/icon_heart_18ffff"
+        android:visibility="visible" />
+
+    <ImageView
+        android:id="@+id/icon_solidheart"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:onClick="heartBtn"
+        android:src="@drawable/icon_solidheart"
+        android:visibility="invisible" />
+
+
+</RelativeLayout>

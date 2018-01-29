@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_another_user"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.missionofseoul.seoul.AnotherUserActivity">
+
+    <ScrollView
+        android:id="@+id/scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/layout_profile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp">
+
+                <ImageView
+                    android:id="@+id/profile"
+                    android:layout_width="72dp"
+                    android:layout_height="72dp"
+                    android:layout_centerHorizontal="true"
+                    android:clickable="true"
+                    android:onClick="clickProfile"
+                    android:src="@drawable/profile" />
+                <!--미션수행률-->
+                <LinearLayout
+                    android:id="@+id/layout_missionrate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="40dp"
+                    android:layout_toLeftOf="@+id/profile"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/missionrate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0%"
+                        android:textColor="@color/darkgray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="미션수행률"
+                        android:textColor="@color/darkgray"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <!--여행톡-->
+                <LinearLayout
+                    android:id="@+id/layout_talk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="40dp"
+                    android:layout_toRightOf="@id/profile"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:onClick="travelTalk"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/talk_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0"
+                        android:textColor="@color/darkgray" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="여행톡"
+                        android:textColor="@color/darkgray"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/layout_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layout_profile"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/nick"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkgray"
+                    android:textSize="16dp" />
+
+                <TextView
+                    android:id="@+id/ageNsex"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/darkgray"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/introduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:text="자기소개를 입력해보세요."
+                    android:textColor="@color/darkgray"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/divider01"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_below="@id/layout_linear"
+                android:layout_marginTop="16dp"
+                android:background="@color/backcolor" />
+
+
+            <com.missionofseoul.seoul.ExpandableHeightGridView
+                android:id="@+id/gridview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/divider01"
+                android:layout_marginTop="8dp"
+                android:clipToPadding="false"
+                android:horizontalSpacing="@dimen/mis_space_size"
+                android:numColumns="4"
+                android:paddingBottom="64dp"
+                android:verticalSpacing="@dimen/mis_space_size" />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <!--프로필 이미지 보여줄 레이아웃-->
+    <RelativeLayout
+        android:id="@+id/layout_fullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/fullimg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:src="@drawable/testbg" />
+
+        <Button
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/close_w_btn"
+            android:onClick="closeFullScreen" />
+
+    </RelativeLayout>
+    <!--비공개 회원 화면 보여주지 않기 -->
+    <RelativeLayout
+        android:id="@+id/layout_private"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/lightgray"
+        android:clickable="true"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/notice_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="비공개 계정입니다"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:id="@+id/lock_icon"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_above="@id/notice_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/lock_icon" />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

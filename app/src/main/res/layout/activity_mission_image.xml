@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_mission_image"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.missionofseoul.seoul.MissionImageActivity">
+
+    <ImageView
+        android:id="@+id/missionimg"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <TextView
+        android:id="@+id/uploadimgtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:onClick="uploadImg"
+        android:text="미션사진변경"
+        android:textColor="@color/colorAccent"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/locationtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_margin="16dp"
+        android:onClick="isLocation"
+        android:text="미션장소인증"
+        android:textColor="@color/colorAccent"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:visibility="visible" />
+
+    <FrameLayout
+        android:layout_width="60dp"
+        android:layout_height="56dp"
+        android:clickable="true"
+        android:onClick="clickClose">
+
+        <Button
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_margin="16dp"
+            android:background="@drawable/close_w_btn" />
+
+    </FrameLayout>
+
+
+    <!-- 갤러리에서 선택한 이미지 보이는 레이아웃 -->
+    <RelativeLayout
+        android:id="@+id/layout_picshow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/black"
+        android:clickable="true"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/selected_img"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clickable="true" />
+
+        <RelativeLayout
+            android:id="@+id/layout_show_hidden"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:background="@color/darkgray"
+            android:clickable="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="16dp"
+                android:onClick="uploadPic"
+                android:text="저장"
+                android:textColor="@color/colorAccent"
+                android:textSize="16dp"
+                android:textStyle="bold" />
+
+            <RelativeLayout
+                android:layout_width="100dp"
+                android:layout_height="56dp"
+                android:clickable="true"
+                android:onClick="leftBtn">
+
+                <Button
+                    android:id="@+id/gallerybtn"
+                    android:layout_width="15dp"
+                    android:layout_height="20dp"
+                    android:layout_margin="16dp"
+                    android:background="@drawable/arr_left_btn_f5f5f5" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_toRightOf="@id/gallerybtn"
+                    android:text="갤러리"
+                    android:textColor="@color/white"
+                    android:textSize="16dp" />
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <!-- 17/02/25 미션설명달기-->
+        <EditText
+            android:id="@+id/comment_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/rounded_edittext"
+            android:hint="미션 사진에 설명을 달아주세요."
+            android:maxLength="200"
+            android:paddingBottom="40dp"
+            android:paddingLeft="8dp"
+            android:textSize="12dp" />
+
+        <!-- 17/02/25 미션설명달기 끝-->
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

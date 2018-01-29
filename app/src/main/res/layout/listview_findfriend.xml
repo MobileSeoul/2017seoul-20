@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/continent_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="South-East Aisa " />
+
+    <TextView
+        android:id="@+id/nation_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:layout_toRightOf="@id/continent_text"
+        android:text="thailand" />
+
+    <TextView
+        android:id="@+id/nick_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="16dp"
+        android:text="nickname" />
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/continent_text"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="title"
+        android:textColor="@color/darkgray" />
+
+    <TextView
+        android:id="@+id/date_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:text="2016-12-08 05:58:12"
+        android:textSize="8dp" />
+
+
+    <ImageView
+        android:id="@+id/icon_views"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_below="@id/title_text"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/date_text"
+        android:src="@drawable/icon_visibility" />
+
+
+    <TextView
+        android:id="@+id/views_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/icon_views"
+        android:text="10"
+        android:textSize="8dp" />
+
+
+    <ImageView
+        android:id="@+id/icon_comment"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_below="@id/title_text"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/views_num"
+        android:src="@drawable/icon_comment" />
+
+    <TextView
+        android:id="@+id/comment_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title_text"
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="8dp"
+        android:layout_toRightOf="@id/icon_comment"
+        android:text="10"
+        android:textSize="8dp" />
+
+    <ImageView
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@id/comment_num"
+        android:layout_marginTop="8dp"
+        android:background="@color/backcolor" />
+
+
+</RelativeLayout>
